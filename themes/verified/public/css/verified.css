@@ -264,3 +264,72 @@ a.text-link,
         font-size: 16px; /* iOS zoom guard */
     }
 }
+
+/* ----------------------------------------------------- demo CTA banner */
+/* Dismissible "Get yours on Verified Hostings" bar, injected by
+   layouts/parts/custom-head.blade.php (markup created in JS, dismissal
+   persisted in localStorage). Fixed bottom bar, deep evergreen. */
+#vh-demo-banner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1040;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 38px;
+    padding: 7px 46px 7px 16px;
+    color: var(--vh-brand-50);
+    text-align: center;
+    background: linear-gradient(90deg, #0e2417 0%, #14532d 55%, #1a6b3c 100%);
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25), 0 -6px 18px rgba(14, 36, 23, 0.18);
+    font: 13px/1.45 var(--vh-font-body);
+}
+
+#vh-demo-banner a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    white-space: nowrap;
+}
+
+#vh-demo-banner a:hover {
+    color: #bbf7d0;
+}
+
+#vh-demo-banner .vhb-close {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: #9db8a6;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+#vh-demo-banner .vhb-close:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.14);
+}
+
+@media (max-width: 540px) {
+    #vh-demo-banner {
+        font-size: 12px;
+        padding: 7px 40px 7px 12px;
+        gap: 8px;
+    }
+}

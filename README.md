@@ -11,8 +11,8 @@ Fraunces display headings + Inter body — matching verifiedhostings.com.
 
 | Path in repo | Install to | Purpose |
 |---|---|---|
-| `themes/verified/layouts/parts/custom-head.blade.php` | same path under the app's `themes/` dir | Extends the stock `custom-head` include (keeps admin "Custom HTML Head" content) and links the theme stylesheet |
-| `themes/verified/public/css/verified.css` | same path under the app's `themes/` dir | Theme CSS — served by BookStack at `/theme/verified/css/verified.css` |
+| `themes/verified/layouts/parts/custom-head.blade.php` | same path under the app's `themes/` dir | Extends the stock `custom-head` include (keeps admin "Custom HTML Head" content), links the theme stylesheet, and injects the dismissible "Get yours on Verified Hostings" demo banner (markup in JS, dismissal persisted in localStorage) |
+| `themes/verified/public/css/verified.css` | same path under the app's `themes/` dir | Theme CSS — served by BookStack at `/theme/verified/css/verified.css` (includes the `#vh-demo-banner` styles) |
 
 ## Install
 
